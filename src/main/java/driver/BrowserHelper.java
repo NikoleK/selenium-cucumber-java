@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class BrowserHelper {
 
@@ -17,7 +18,8 @@ public class BrowserHelper {
 
     public static void openWindow(String url){
         driver = new FirefoxDriver();
-        driver.manage().window().setSize(new Dimension(1382,744));
+        driver.manage().window().setSize(new Dimension(800,600));
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
         driver.get(url);
     }

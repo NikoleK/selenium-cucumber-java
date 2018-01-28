@@ -1,7 +1,6 @@
 package driver;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +17,7 @@ public class BrowserHelper {
 
     public static void openWindow(String url){
         driver = new FirefoxDriver();
-        driver.manage().window().setSize(new Dimension(800,600));
+        driver.manage().window().fullscreen();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
         driver.get(url);

@@ -23,6 +23,7 @@ public class Element {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         } catch (TimeoutException e) {
+            BrowserHelper.takeScreenShot();
             throw new ElementIsNotPresent("Element with xpath: " + xpath + " can't be found");
         }
     }

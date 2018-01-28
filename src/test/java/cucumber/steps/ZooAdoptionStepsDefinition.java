@@ -59,7 +59,6 @@ public class ZooAdoptionStepsDefinition {
 
     @Then("^displayed text equals to the \"([^\"]*)\"$")
     public void checkTextOnFinalPage(String expectedTest) {
-        System.out.println(finalPage.getLabelText());
         assertEquals(expectedTest, finalPage.getLabelText());
     }
 

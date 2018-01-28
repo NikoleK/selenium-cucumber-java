@@ -13,6 +13,6 @@ import org.junit.runner.RunWith;
         strict = false,
         snippets = SnippetType.UNDERSCORE
 )
-public class CucumberTestRunner {
+public class CucumberTest {
 
 }
